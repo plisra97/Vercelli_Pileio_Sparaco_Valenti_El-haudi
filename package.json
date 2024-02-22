@@ -10,7 +10,7 @@
   },
   "styles": [
     "src/styles.css",
-    "src/app/gestione-spese/gestione-spese.component.css" 
+    "src/app/gestione-spese/gestione-spese.component.css"
   ],
   "private": true,
   "dependencies": {

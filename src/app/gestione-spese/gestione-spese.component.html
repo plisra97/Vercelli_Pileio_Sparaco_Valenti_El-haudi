@@ -24,10 +24,11 @@
   Aggiungi
 </button>
 </div>
-
+<div>
+  <h2>Totale: {{ totale }} €</h2>
+</div>
 <div>
   <h2>Lista delle spese/entrate</h2>
- 
 </div>
 <ul>
   <li style="list-style-type: none;" *ngFor="let voce of spese; let i = index" class="{{ voce.tipo === 'spesa' ? 'spesa-color' : 'entrata-color' }} ">

@@ -34,19 +34,31 @@ export class GestioneSpeseComponent {
 
 
   spese: { tipo: string, importo: number }[] = [];
-
+  totale: number =0;
   aggiungiVoce() {
     const importo = parseFloat(this.nuovaVoce);
     if (!isNaN(importo)) {
       this.spese.push({ tipo: this.tipo, importo: importo });
       this.nuovaVoce = ''; 
+      if (this.tipo === 'spesa') {
+        this.totale -= importo;
+      } else {
+        this.totale += importo;
+      }
     }
   }
   
 
   rimuoviVoce(index: number) {
+    const voce = this.spese[index];
+    if (voce.tipo === 'spesa') {
+      this.totale += voce.importo;
+    } else {
+      this.totale -= voce.importo;
+    }
     this.spese.splice(index, 1);
   }
+ 
 
   
 }
