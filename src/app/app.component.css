@@ -1,0 +1,7 @@
+.mat-list-item.spesa-color {
+  color: red; /* Cambia il colore del testo per le spese */
+}
+
+.mat-list-item.entrata-color {
+  color: green; /* Cambia il colore del testo per le entrate */
+}

@@ -1,0 +1,54 @@
+.spesa-color {
+  color: red; /* Cambia il colore del testo per le spese */
+}
+
+
+.entrata-color {
+  color: green; /* Cambia il colore del testo per le entrate */
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  text-align: center;
+}
+
+li {
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 10px;
+border-bottom: 1px solid #ccc;
+}
+
+li button {
+  margin-left: 10px;
+}
+
+h2{
+  display:flex ;
+  justify-content: center;
+  align-items: center ;
+  font-family: "Kanit", sans-serif;
+  font-weight: 400;
+  padding: 20px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1100px;
+
+}
+.input{
+  width: 1100px;
+}
+.mat-form-field {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+button {
+  margin-top: 20px;
+}

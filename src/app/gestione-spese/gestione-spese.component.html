@@ -1,0 +1,40 @@
+<div>
+    <h2>Inserisci una spesa o un'entrata</h2>
+    
+    
+</div>
+  
+
+  
+<div class="form-container">
+
+<mat-form-field>
+  <mat-label>Inserisci un'entrata o un uscita</mat-label>
+  <input matInput type="text" [(ngModel)]="nuovaVoce" placeholder="Inserisci..">
+</mat-form-field>
+<mat-form-field>
+  <mat-label>Seleziona</mat-label>
+  <mat-select [(ngModel)]="tipo" placeholder="Seleziona">
+    <mat-option value="spesa">Spesa</mat-option>
+    <mat-option value="entrata">Entrata</mat-option>
+  </mat-select>
+</mat-form-field>
+<button mat-fab extended color="accent" (click)="aggiungiVoce()">
+  <mat-icon>add</mat-icon>
+  Aggiungi
+</button>
+</div>
+
+<div>
+  <h2>Lista delle spese/entrate</h2>
+ 
+</div>
+<ul>
+  <li style="list-style-type: none;" *ngFor="let voce of spese; let i = index" class="{{ voce.tipo === 'spesa' ? 'spesa-color' : 'entrata-color' }} ">
+    {{ voce.tipo === 'spesa' ? '-' : '+' }} {{ voce.importo }} €
+    <button mat-mini-fab	 color="warn" aria-label="Example icon button with a delete icon" (click)="rimuoviVoce(i)">
+      <mat-icon>delete</mat-icon>
+    </button>
+  </li>
+
+</ul>
